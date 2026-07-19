@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BN Digital</title>
+    <style>
+        /* --- ESTILOS GLOBALES (Paleta de colores moderna y tipografía limpia) --- */
+        :root {
+            --color-principal: #4f46e5; /* Morado/Índigo moderno */
+            --color-secundario: #f3f4f6; /* Gris muy claro para fondos */
+            --color-texto: #1f2937; /* Gris oscuro para lectura cómoda */
+            --color-blanco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        header {
+            background-color: var(--color-blanco);
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: var(--color-principal);
+            text-decoration: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-texto);
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--color-principal);
+        }
+
+        /* --- SECCIÓN HERO (Presentación impactante) --- */
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: var(--color-blanco);
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--color-blanco);
+            color: var(--color-principal);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* --- SECCIÓN DE TARJETAS (Servicios o Características) --- */
+        .contenido {
+            padding: 80px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .seccion-titulo {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+
+        .grid-tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta {
+            background-color: var(--color-blanco);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta h3 {
+            color: var(--color-principal);
+            margin-bottom: 15px;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            background-color: var(--color-texto);
+            color: #9ca3af;
+            text-align: center;
+            padding: 40px 10%;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <a href="#" class="logo">MiMarca</a>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Bienvenida (Hero) -->
+    <section class="hero">
+        <h1>Diseño Simple, Resultados Increíbles</h1>
+        <p>Creamos experiencias digitales minimalistas, rápidas y totalmente adaptadas a tus necesidades.</p>
+        <a href="#" class="btn">Empezar Ahora</a>
+    </section>
+
+    <!-- Sección de Características -->
+    <main class="contenido">
+        <h2 class="seccion-titulo">Lo que ofrecemos</h2>
+        
+        <div class="grid-tarjetas">
+            <div class="tarjeta">
+                <h3>Diseño Limpio</h3>
+                <p>Menos es más. Diseños que no saturan al usuario y enfocan la atención en lo verdaderamente importante.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Alta Velocidad</h3>
+                <p>Optimización interna para que tu sitio web cargue en cuestión de milisegundos en cualquier pantalla.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Adaptable (Responsive)</h3>
+                <p>Se verá perfecto tanto en un teléfono móvil de última generación como en pantallas de computadora de escritorio.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 MiMarca. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
