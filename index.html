@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BN Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* --- ESTILOS GLOBALES (Paleta de colores moderna y tipografía limpia) --- */
         :root {
@@ -37,15 +38,21 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            margin-bottom: 50px;
         }
 
         .logo {
-            font-weight: bold;
-            font-size: 1.4rem;
-            color: var(--color-principal);
-            text-decoration: none;
+            display: inline-block; /* Esto ayuda a que no fuerce un salto de línea */
+            vertical-align: middle; /* Alinea el logo con el menú */
+            max-height: 80px; /* Asegura que el logo no sea gigante */
+            overflow: hidden;
         }
-
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            }
         nav a {
             text-decoration: none;
             color: var(--color-texto);
@@ -62,8 +69,9 @@
         .hero {
             background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
             color: var(--color-blanco);
-            padding: 100px 10%;
+            padding: 80px 10%;
             text-align: center;
+            margin-top: 50px;
         }
 
         .hero h1 {
@@ -119,8 +127,8 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
             border: 1px solid #e5e7eb;
-            transition: transform 0.3s;
-        }
+            text-align: center; /* <--- Agrega esta línea */
+        }   
 
         .tarjeta:hover {
             transform: translateY(-5px);
@@ -141,16 +149,33 @@
             font-size: 0.9rem;
         }
     </style>
+    <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1794527218180009');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1794527218180009&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
 
     <!-- Menú de Navegación -->
     <header>
-        <a href="#" class="logo">MiMarca</a>
+        <a href="#" class="logo"><img src="logo.jpeg" alt="Logo BN Digital" style="height: 80px; width: auto;"></a>
         <nav>
             <a href="#">Inicio</a>
             <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
+            <a href="https://www.facebook.com/BNDigitalweb/" target="_blank">Contacto</a>
         </nav>
     </header>
 
@@ -167,23 +192,26 @@
         
         <div class="grid-tarjetas">
             <div class="tarjeta">
-                <h3>Diseño Limpio</h3>
-                <p>Menos es más. Diseños que no saturan al usuario y enfocan la atención en lo verdaderamente importante.</p>
+                <i class="fa-solid fa-paintbrush" style="font-size: 40px; color: #4722eb; margin-bottom: 15px;"></i>
+                <h3>Atrae más clientes</h3>
+                <p>Creamos una vitrina digital diseñada para que los clientes que te buscan en internet,encuentren tu negocio de inmediato.</p>
             </div>
             <div class="tarjeta">
-                <h3>Alta Velocidad</h3>
-                <p>Optimización interna para que tu sitio web cargue en cuestión de milisegundos en cualquier pantalla.</p>
+                <i class="fa-solid fa-rocket" style="font-size: 40px; color: #4722eb; margin-bottom: 15px;"></i>
+                <h3>Ahorra tiempo</h3>
+                <p>Automatizamos tareas repetitivas, como consultas frecuentes o pedidos, para que tu puedas enfocarte en lo más importante: hacer crecer tu empresa.</p>
             </div>
             <div class="tarjeta">
-                <h3>Adaptable (Responsive)</h3>
-                <p>Se verá perfecto tanto en un teléfono móvil de última generación como en pantallas de computadora de escritorio.</p>
+                <i class="fa-solid fa-shield-halved" style="font-size: 40px; color: #4722eb; margin-bottom: 15px;"></i>
+                <h3>Tranquilidad total</h3>
+                <p>Nos encargamos de toda la parte técnica, actualizaciones y seguridad, para que tu no tengas que preocuparte por nada relacionado con la tecnología.</p>
             </div>
         </div>
     </main>
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2026 MiMarca. Todos los derechos reservados.</p>
+        <p>&copy; 2026 BN Digital. Todos los derechos reservados.</p>
     </footer>
 
 </body>
