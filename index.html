@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BN Digital</title>
+    <title>BN Digital | Soluciones y Servicios Digitales</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* --- ESTILOS GLOBALES (Paleta de colores moderna y tipografía limpia) --- */
@@ -12,6 +12,10 @@
             --color-secundario: #f3f4f6; /* Gris muy claro para fondos */
             --color-texto: #1f2937; /* Gris oscuro para lectura cómoda */
             --color-blanco: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Hace que el desplazamiento por los enlaces sea suave */
         }
 
         * {
@@ -42,9 +46,9 @@
         }
 
         .logo {
-            display: inline-block; /* Esto ayuda a que no fuerce un salto de línea */
-            vertical-align: middle; /* Alinea el logo con el menú */
-            max-height: 80px; /* Asegura que el logo no sea gigante */
+            display: inline-block;
+            vertical-align: middle;
+            max-height: 80px;
             overflow: hidden;
         }
         .logo img {
@@ -52,7 +56,13 @@
             width: auto;
             object-fit: contain;
             display: block;
-            }
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
         nav a {
             text-decoration: none;
             color: var(--color-texto);
@@ -63,6 +73,51 @@
 
         nav a:hover {
             color: var(--color-principal);
+        }
+
+        /* --- ESTILOS PARA EL MENÚ DESPLEGABLE (DROPDOWN DE CONTACTO) --- */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .dropdown .dropbtn {
+            margin-left: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: var(--color-blanco);
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 1;
+            border: 1px solid #e5e7eb;
+            margin-top: 10px;
+        }
+
+        .dropdown-content a {
+            color: var(--color-texto);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin-left: 0;
+            font-size: 0.95rem;
+            transition: background-color 0.2s, color 0.2s;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-principal);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         /* --- SECCIÓN HERO (Presentación impactante) --- */
@@ -127,7 +182,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
             border: 1px solid #e5e7eb;
-            text-align: center; /* <--- Agrega esta línea */
+            text-align: center;
         }   
 
         .tarjeta:hover {
@@ -150,7 +205,7 @@
         }
     </style>
     <!-- Meta Pixel Code -->
-<script>
+    <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -174,8 +229,14 @@
         <a href="#" class="logo"><img src="logo.jpeg" alt="Logo BN Digital" style="height: 80px; width: auto;"></a>
         <nav>
             <a href="#">Inicio</a>
-            <a href="#">Servicios</a>
-            <a href="https://www.facebook.com/BNDigitalweb/" target="_blank">Contacto</a>
+            <a href="#servicios">Servicios</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Contacto <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="https://www.facebook.com/BNDigitalweb/" target="_blank"><i class="fa-brands fa-facebook" style="margin-right: 8px;"></i> Facebook</a>
+                    <a href="https://www.instagram.com/https://www.instagram.com/bn_digitalsolutions?igsh=MWE0Y2NqenRpZzh1Mg==" target="_blank"><i class="fa-brands fa-instagram" style="margin-right: 8px;"></i> Instagram</a>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -183,18 +244,18 @@
     <section class="hero">
         <h1>Diseño Simple, Resultados Increíbles</h1>
         <p>Creamos experiencias digitales minimalistas, rápidas y totalmente adaptadas a tus necesidades.</p>
-        <a href="#" class="btn">Empezar Ahora</a>
+        <a href="https://wa.me/584247111801?text=Hola,%20quiero%20más%20información%20sobre%20sus%20sitios%20web" target="_blank" class="btn">Quiero mi sitio web</a>
     </section>
 
     <!-- Sección de Características -->
-    <main class="contenido">
+    <main class="contenido" id="servicios">
         <h2 class="seccion-titulo">Lo que ofrecemos</h2>
         
         <div class="grid-tarjetas">
             <div class="tarjeta">
                 <i class="fa-solid fa-paintbrush" style="font-size: 40px; color: #4722eb; margin-bottom: 15px;"></i>
                 <h3>Atrae más clientes</h3>
-                <p>Creamos una vitrina digital diseñada para que los clientes que te buscan en internet,encuentren tu negocio de inmediato.</p>
+                <p>Creamos una vitrina digital diseñada para que los clientes que te buscan en internet, encuentren tu negocio de inmediato.</p>
             </div>
             <div class="tarjeta">
                 <i class="fa-solid fa-rocket" style="font-size: 40px; color: #4722eb; margin-bottom: 15px;"></i>
